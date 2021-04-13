@@ -1,0 +1,71 @@
+class Solution {
+    public String solution(int a, int b) {
+        String answer = "";
+        //1. a, b 를이용하여 흐른 일수 구하기 a*일 + b 2. 7로 %하여 나머지계산해서 요일계산
+        //배열써서 풀자
+        int sum_day =0;
+        if(a==1){
+            sum_day = b;
+        }
+        else if(a==2){
+            sum_day = 31+b;
+        }
+        else if(a==3){
+            sum_day = 31+29+b;
+        }
+        else if(a==4){
+            sum_day = 31+29+31+b;
+        }
+        else if(a==5){
+            sum_day = 31+29+31+30+b;
+        }
+        else if(a==6){
+            sum_day = 31+29+31+30+31+b;
+        }
+        else if(a==7){
+            sum_day = 31+29+31+30+31+30+b;
+        }
+        else if(a==8){
+            sum_day = 31+29+31+30+31+30+31+b;
+        }
+        else if(a==9){
+            sum_day = 31+29+31+30+31+30+31+31+b;
+        }
+        else if(a==10){
+            sum_day = 31+29+31+30+31+30+31+31+30+b;
+        }
+        else if(a==11){
+            sum_day = 31+29+31+30+31+30+31+31+30+31+b;
+        }
+        else if(a==12){
+            sum_day = 31+29+31+30+31+30+31+31+30+31+30+b;
+        }
+
+
+
+
+        if(sum_day % 7 == 1){
+            answer ="FRI";
+        }
+        else if(sum_day % 7 == 2){
+            answer ="SAT";
+        }
+        else if(sum_day % 7 == 3){
+            answer ="SUN";
+        }
+        else if(sum_day % 7 == 4){
+            answer ="MON";
+        }
+        else if(sum_day % 7 == 5){
+            answer ="TUE";
+        }
+        else if(sum_day % 7 == 6){
+            answer ="WED";
+        }
+        else{
+            answer ="THU";
+        }
+
+        return answer;
+    }
+}
